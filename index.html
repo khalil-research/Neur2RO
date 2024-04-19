@@ -119,7 +119,7 @@
 <html>
 <head>
 	<title>Neur2RO: Neural Two-Stage Robust Optimization</title>
-	<meta property="og:image" content="Path to my teaser.pdf"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Neur2RO: Neural Two-Stage Robust Optimization" />
 	<meta property="og:description" content="A neural network-based technique" />
 
@@ -142,24 +142,24 @@
 		<table align=center width=1000px>
 			<table align=center width=900px>
 				<tr>
-					<td align=center width=200px>
+					<td align=center width=240px>
 						<center>
-							<span style="font-size:24px"><a href="https://jdumouchelle.github.io/">Justin Dumouchelle<sup>1</sup></a></span>
+							<span style="font-size:24px"><a href="https://jdumouchelle.github.io/">Justin Dumouchelle</a><sup>1</sup></span>
 						</center>
 					</td>
 					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/people/eat-esther-julien-msc">Esther Julien<sup>2</sup></a></span>
+							<span style="font-size:24px"><a href="https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/people/eat-esther-julien-msc">Esther Julien</a><sup>2</sup></span>
 						</center>
 					</td>
 					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://www.uva.nl/en/profile/k/u/j.kurtz/j.kurtz.html?cb">Jannis Kurtz<sup>3</sup></a></span>
+							<span style="font-size:24px"><a href="https://www.uva.nl/en/profile/k/u/j.kurtz/j.kurtz.html?cb">Jannis Kurtz</a><sup>3</sup></span>
 						</center>
 					</td>
 					<td align=center width=200px>
 						<center>
-							<span style="font-size:24px"><a href="https://ekhalil.com/">Elias B. Khalil<sup>1</sup></a></span>
+							<span style="font-size:24px"><a href="https://ekhalil.com/">Elias B. Khalil</a><sup>1</sup></span>
 						</center>
 					</td>
 
@@ -171,12 +171,12 @@
 				<tr>
 					<td align=center width=800px>
 						<center>
-							<span><sup>1</sup>University of Toronto</span>	
+							<span><sup>1</sup>University of Toronto, <sup>2</sup>TU Delft, <sup>3</sup>University of Amsterdam</span>	
 						</center>
 						
 					</td>
 				</tr>
-				<tr>
+<!-- 				<tr>
 					<td align=center width=800px>
 						<center>
 							<span><sup>2</sup>TU Delft</span>	
@@ -191,7 +191,7 @@
 						</center>
 						
 					</td>
-				</tr>				
+				</tr>		 -->		
 				<tr>
 					<td align=center width=800px>
 						<center>
@@ -236,11 +236,11 @@
 	</center>
 	<br><br>
 	<center>
-		<table align=center width=1200px>
+		<table align=center width=1100px>
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="width:1000px" src="./resources/teaser.pdf"/>
+						<img class="round" style="width:1000px" src="./resources/teaser.png"/>
 					</center>
 				</td>
 			</tr>
@@ -248,14 +248,15 @@
 		<table align=center width=850px>
 			<tr>
 				<td>
-					<center>
-					Overview of Neur2RO, a fast learning-based approximation to column-and-constraint generation (CCG) for solving two-stage robust optimization problems.  In each iteration, a <i>main problem</i> (box (a)) is solved to find a good first-stage solution x for the set of scenarios that have been identified thus far (initially, none). Then, an <i>adversarial problem</i> (box (c)) is solved to obtain a new scenario for which the solution x is not feasible anymore in main problem. If no such scenario exists, then x is optimal and CCG terminates. Otherwise, the adversarial scenario is added to the set of worst-case scenarios and we iterate to main problem. For each of the main and adversarial problems, we show two versions: classical (CCG, boxes (a) and (c)) and learning-augmented (Neur2RO, dashed boxes (b) and (d))
-					<center>
+					<td style="text-align: justify; text-align-last: left;">
+					Overview of Neur2RO, a fast learning-based approximation to column-and-constraint generation (CCG) for solving two-stage robust optimization problems.  In each iteration, a <i>main problem</i> (box (a)) is solved to find a good first-stage solution <b>x</b> for the set of scenarios that have been identified thus far (initially, none). Then, an <i>adversarial problem</i> (box (c)) is solved to obtain a new scenario for which the solution <b>x</b> is not feasible anymore in main problem. If no such scenario exists, then <b>x</b> is optimal and CCG terminates. Otherwise, the adversarial scenario is added to the set of worst-case scenarios and we iterate to main problem. For each of the main and adversarial problems, we show two versions: classical (CCG, boxes (a) and (c)) and learning-augmented (Neur2RO, dashed boxes (b) and (d))
+					</td>
 			</tr>
 		</table>
 	</center>
-
+	<br>
 	<hr>
+
 
 	<table align=center width=850px>
 		<center><h1>Abstract</h1></center>
@@ -266,6 +267,7 @@
 		</tr>
 	</table>
 	<br>
+	<hr>
 
 	<!-- <hr>
 	<center><h1><a href='https://github.com/khalil-research/Neur2SP/tree/gh-pages/resources/Neur2SP_Slides.pdf'>[Slides]</a></h1></center>
@@ -288,6 +290,7 @@
 		</tr>
 	</table>
 	 -->
+	<!-- <hr> -->
 	<hr>
 
 	<table align=center width=850px>
@@ -295,7 +298,7 @@
 		<tr>
 			<td>
 				<p align="center">
-					<iframe width="500" height="350" src="https://www.youtube.com/watch?v=3cl0smeaTxk"></iframe>
+					<iframe width="500" height="350" src="https://www.youtube.com/embed/3cl0smeaTxk"></iframe>
 				</p>
 			</td>
 		</tr>
@@ -344,10 +347,12 @@
 	</table> -->
 	<br>
 	<hr>
+	<!-- <hr> -->
+	<hr>
 	<table align=center width=800px>
 		<center><h1>Paper and Supplementary Material</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.pdf"/></a></td>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
 			<td><span style="font-size:14pt">Dumouchelle, Julien, Kurtz, Khalil.<br>
 				<b>Neur2RO: Neural Two-Stage Robust Optimization.</b><br>
 				In ICLR, 2024.<br>
