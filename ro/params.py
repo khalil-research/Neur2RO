@@ -27,7 +27,7 @@ kp = SimpleNamespace(
     threads = 1,                # for data generation only
     tr_split=0.80,              # train/test split size
     
-    n_samples_prob = 500,       # number of problems to samples
+    n_samples_inst = 500,       # number of instances to samples
     n_samples_fs = 10,          # number of first-stage decisions samples per problem
     n_samples_per_fs = 50,      # number of uncertainty samples per first-stage decision
 
@@ -42,8 +42,6 @@ kp = SimpleNamespace(
 #   Capital Budgeting Problem #
 # --------------------------- #
 
-
-# standard CB instances to size 50
 cb = SimpleNamespace(
     # problem parameters
     n_items=[10, 20, 30, 40, 50],
@@ -64,7 +62,7 @@ cb = SimpleNamespace(
 
     tr_split=0.80,  # train/test split size
 
-    n_samples_prob = 500,       # number of problems to samples
+    n_samples_inst = 500,       # number of instances to samples
     n_samples_fs = 10,          # number of first-stage decisions samples per problem
     n_samples_per_fs = 50,      # number of uncertainty samples per first-stage decision
 
@@ -73,3 +71,4 @@ cb = SimpleNamespace(
     inst_seed=range(1, 101),
     data_path='./data/',
 )
+
