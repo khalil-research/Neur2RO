@@ -16,7 +16,7 @@ python -m ro.scripts.01_init_problem --problem kp
 
 
 
-To run data collection, execute the following command.  When implementing new problems or debugging, set `--debug 1` to prevent multiprocessing, which will make debugging easier.  Note that the data collection in the repository does not exactly reproduce the dataset in the paper.  However, previous datasets are available at [ADD].  
+To run data collection, execute the following command.  When implementing new problems or debugging, set `--debug 1` to prevent multiprocessing, which will make debugging easier.  Note that the data collection in the repository does not exactly reproduce the dataset in the paper after refactoring the code.  However, previous datasets are available at https://drive.google.com/drive/folders/1GU5KJcEP4P_ALbPKFTRuqfKrpquY6r8x?usp=sharing.  
 ```
 python -m ro.scripts.02_generate_dataset --problem kp --n_procs [N] --debug 0
 ```
