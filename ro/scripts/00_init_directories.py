@@ -4,8 +4,8 @@ import subprocess
 
 from argparse import ArgumentParser
 
-import blo.params as params
-from blo.utils import factory_get_path
+import ro.params as params
+from ro.utils import factory_get_path
 
 #-----------------------------------------------------------------------#
 #                                                                       #
@@ -22,7 +22,7 @@ def main(args):
     cfg = getattr(params, args.problem)
 
     # initialize get_path
-    get_path = factory_get_path(args)
+    get_path = factory_get_path(args.problem)
 
 
     fp = get_path(cfg.data_path, cfg, "", suffix="")
