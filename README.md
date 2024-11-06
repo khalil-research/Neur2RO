@@ -10,7 +10,7 @@ This repository corresponds to two papers.
      - The repository does not contain any of this implementation.  It will be made publicly available later. 
 
 
-## Introduction
+## Overview
 This repository contains all the implementations required to reproduce the experiments from the paper, trained models, and results.  In addition, the repository is modular enough to support the implementation of new two-stage robust optimization (2RO) problems with only a few files needed.  Below, we include an example of running the pipeline for the two-stage robust knapsack problem and details of the files needed for adding new 2RO problems.  
 
 
