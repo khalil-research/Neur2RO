@@ -1,7 +1,17 @@
 # Neur2RO
-Implementation of "Neur2RO: Neural Two-Stage Robust Optimization" ([https://arxiv.org/pdf/2205.12006.pdf](https://arxiv.org/pdf/2310.04345.pdf)).  
 
-This repository contains all the implementations required to reproduce the experiments from the paper, as well as the trained models and results.  In addition, the repository is modular enough to support the implementation of new two-stage robust optimization (2RO) problems with only a few files needed.  Below, we include an example of running the pipeline for the two-stage robust knapsack problem and details of the files needed for adding new 2RO problems.  
+This repository corresponds to two papers.
+  - \[1\] Dumouchelle, J., Julien, E., Kurtz, J., & Khalil, E. B. Neur2RO: Neural Two-Stage Robust Optimization. In *The Twelfth International Conference on Learning Representations, 2024*. [\[Paper\]](https://openreview.net/pdf?id=T5Xb0iGCCv)
+    - A preliminary version of the work published in ICLR 2024.
+    - The repository contains all code/models/data from this work version.
+      
+  - \[2\]   Dumouchelle, J., Julien, E., Kurtz, J., & Khalil, E. B. Deep Learning for Two-Stage Robust Integer Optimization. *Under Review*, 2024 [\[Paper\]](https://arxiv.org/pdf/2310.04345.pdf)
+     - An extension of this work that extends the paper with benchmarks, baselines, methodology, computational improvements, and theory.
+     - The repository does not contain any of this implementation.  It will be made publicly available later. 
+
+
+## Introduction
+This repository contains all the implementations required to reproduce the experiments from the paper, trained models, and results.  In addition, the repository is modular enough to support the implementation of new two-stage robust optimization (2RO) problems with only a few files needed.  Below, we include an example of running the pipeline for the two-stage robust knapsack problem and details of the files needed for adding new 2RO problems.  
 
 
 ## Example:  Two-Stage Robust Knapsack Problem
@@ -61,12 +71,22 @@ If one wants to add a new machine learning model for specific problem `p` (or ev
 Please cite our work if you find our code/paper useful to your work.
 
 ```
-  @article{dumouchelle2023neur2ro,
+
+@inproceedings{
+  dumouchelle2024neurro,
+  title={Neur2{RO}: Neural Two-Stage Robust Optimization},
+  author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias Boutros Khalil},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024},
+}
+
+@article{dumouchelle2023neur2ro,
     title={Neur2RO: Neural Two-Stage Robust Optimization},
     author={Dumouchelle, Justin and Julien, Esther and Kurtz, Jannis and Khalil, Elias B},
     journal={arXiv preprint arXiv:2310.04345},
     year={2023}
 }
+
 ```
 
 ## Benchmark Instances
