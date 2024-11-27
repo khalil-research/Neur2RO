@@ -118,9 +118,9 @@
 
 <html>
 <head>
-	<title>Neur2RO: Neural Two-Stage Robust Optimization</title>
+	<title>Neur2RO</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Neur2RO: Neural Two-Stage Robust Optimization" />
+	<meta property="og:title" content="Deep Learning for Two-Stage Robust Integer Optimization" />
 	<meta property="og:description" content="A neural network-based technique" />
 
 	<!-- Get from Google Analytics -->
@@ -138,7 +138,11 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Neur2RO: Neural Two-Stage Robust Optimization</span>
+		<span style="font-size:36px">Deep Learning for Two-Stage Robust Integer Optimization</span>
+		<!-- <br> -->
+		<br> 
+		<span style="font-size:28px">&amp Neur2RO: Neural Two-Stage Robust Optimization</span>
+
 		<table align=center width=1000px>
 			<table align=center width=900px>
 				<tr>
@@ -205,11 +209,16 @@
 			<br>
 			<table align=center width=250px>
 				<tr>
-					<td align=center width=120px>
+					</td>
+					<td align=center width=240px>
 						<center>
-							<span style="font-size:24px"><a href='https://arxiv.org/abs/2310.04345'>[Paper]&nbsp&nbsp</a></span>
+							<span style="font-size:24px"><a href='https://arxiv.org/pdf/2310.04345'>[Extended&nbspPaper]&nbsp&nbsp</a></span>
 						</center>
 					</td>
+					<td align=center width=240px>
+						<center>
+							<span style="font-size:24px"><a href='https://openreview.net/pdf?id=T5Xb0iGCCv'>[ICLR&nbspPaper]&nbsp&nbsp</a></span>
+						</center>
 					<td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href='https://github.com/khalil-research/Neur2RO'>[GitHub]&nbsp&nbsp</a></span><br>
@@ -262,13 +271,15 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td style="text-align: justify; text-align-last: left;">
-				Robust optimization provides a mathematical framework for modeling and solving decision-making problems under worst-case uncertainty. This work addresses two-stage robust optimization (2RO) problems (also called adjustable robust optimization), wherein first-stage and second-stage decisions are made before and after uncertainty is realized, respectively. This results in a nested min-max-min optimization problem which is extremely challenging computationally, especially when the decisions are discrete. We propose Neur2RO, an efficient machine learning-driven instantiation of column-and-constraint generation (CCG), a classical iterative algorithm for 2RO. Specifically, we learn to estimate the value function of the second-stage problem via a novel neural network architecture that is easy to optimize over by design. Embedding our neural network into CCG yields high-quality solutions quickly as evidenced by experiments on two 2RO benchmarks, knapsack and capital budgeting. For knapsack, Neur2RO finds solutions that are within roughly 2% of the best-known values in a few seconds compared to the three hours of the state-of-the-art exact branch-and-price algorithm; for larger and more complex instances, Neur2RO finds even better solutions. For capital budgeting, Neur2RO outperforms three variants of the k-adaptability algorithm, particularly on the largest instances, with a 10 to 100-fold reduction in solution time. 
+				<!-- Robust optimization provides a mathematical framework for modeling and solving decision-making problems under worst-case uncertainty. This work addresses two-stage robust optimization (2RO) problems (also called adjustable robust optimization), wherein first-stage and second-stage decisions are made before and after uncertainty is realized, respectively. This results in a nested min-max-min optimization problem which is extremely challenging computationally, especially when the decisions are discrete. We propose Neur2RO, an efficient machine learning-driven instantiation of column-and-constraint generation (CCG), a classical iterative algorithm for 2RO. Specifically, we learn to estimate the value function of the second-stage problem via a novel neural network architecture that is easy to optimize over by design. Embedding our neural network into CCG yields high-quality solutions quickly as evidenced by experiments on two 2RO benchmarks, knapsack and capital budgeting. For knapsack, Neur2RO finds solutions that are within roughly 2% of the best-known values in a few seconds compared to the three hours of the state-of-the-art exact branch-and-price algorithm; for larger and more complex instances, Neur2RO finds even better solutions. For capital budgeting, Neur2RO outperforms three variants of the k-adaptability algorithm, particularly on the largest instances, with a 10 to 100-fold reduction in solution time.  -->
+				Robust optimization is an established framework for modeling optimization problems with uncertain parameters. While static robust optimization is often criticized for being too conservative, two-stage (or adjustable) robust optimization (2RO) provides a less conservative alternative by allowing some decisions to be made after the uncertain parameters have been revealed. Unfortunately, in the case of integer decision variables, existing solution methods for 2RO typically fail to solve large-scale instances, limiting the applicability of this modeling paradigm to simple cases. We propose Neur2RO, a deep-learning-augmented instantiation of the column-and-constraint-generation (CCG) algorithm, which expands the applicability of the 2RO framework to large-scale instances with integer decisions in both stages. A custom-designed neural network is trained to estimate the optimal value and feasibility of the second-stage problem. The network can be incorporated into CCG, leading to more computationally tractable subproblems in each of its iterations. The resulting algorithm enjoys approximation guarantees which depend on the neural network's prediction error. In our experiments, Neur2RO produces high-quality solutions quickly, outperforming state-of-the-art methods on two-stage knapsack, capital budgeting, and facility location problems. Compared to existing methods, which often run for hours, Neur2RO finds better solutions in a few seconds or minutes. 
 			</td>
 		</tr>
 	</table>
+
 	<br>
 	<hr>
-
+	<br>
 	<!-- <hr>
 	<center><h1><a href='https://github.com/khalil-research/Neur2SP/tree/gh-pages/resources/Neur2SP_Slides.pdf'>[Slides]</a></h1></center>
 
@@ -346,15 +357,17 @@
 	</table> -->
 	<br>
 	<!-- <hr> -->
-	<hr>
+	<br>
+
+	<!-- <hr> -->
 	<table align=center width=800px>
-		<center><h1>Paper and Supplementary Material</h1></center>
+		<center><h1>Journal Extension of the Paper (Under Review)</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">Dumouchelle, Julien, Kurtz, Khalil.<br>
-				<b>Neur2RO: Neural Two-Stage Robust Optimization.</b><br>
-				In ICLR, 2024.<br>
-				(hosted on <a href="https://arxiv.org/abs/2310.04345">ArXiv</a>)<br>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/dl42ro.png"/></a></td>
+			<td><span style="font-size:14pt">J. Dumouchelle, E. Julien, J. Kurtz, E. B. Khalil<br>
+				<b>Deep Learning for Two-Stage Robust Integer Optimization</b><br>
+				preprint: arXiv:2310.04345, 2024<br>
+				(hosted on <a href="https://arxiv.org/pdf/2310.04345">ArXiv</a>)<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
@@ -363,15 +376,184 @@
 	</table>
 	<br>
 
-	<table align=center width=600px>
+<!-- 	<span style="font-size:14pt">
+	
+	</span> -->
+
+<!-- 	<span style="font-size:14pt; background-color:#FFFF00;">
+	<span style="background-color:#ddd;">
+	<pre>
+	<code>	
+		@article{dumouchelle2024deeplearningtwostagerobust,
+			title={Deep Learning for Two-Stage Robust Integer Optimization},
+			author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias B. Khalil},
+			journal={arXiv preprint arXiv:2310.04345},
+			year={2024}
+		}	
+	</code>
+	</pre>
+	</span> -->
+
+<!-- <style>
+  .background-block {
+
+    background-color: #ffeb3b;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+ -->
+<!-- <div > -->
+<!-- 	      <pre>
+	    <code style="background-color: #f0f0f0; ">
+	      @article{dumouchelle2024deeplearningtwostagerobust, <br>
+	        title={Deep Learning for Two-Stage Robust Integer Optimization}, <br>
+	        author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias B. Khalil}, <br>
+	        journal={arXiv preprint arXiv:2310.04345}, <br>
+	        year={2024} <br>
+	      } 
+	      	    </code>
+	  </pre>
+	   </div> -->
+
+
+
+<!-- <div class="background-block">
+      <code>  
+
+	    </code>
+</div> -->
+
+
+<!-- 	<span style="font-size:14pt; background-color:#ddd;">
+	  <pre>
+	    <code>  
+	      @article{dumouchelle2024deeplearningtwostagerobust,
+	        title={Deep Learning for Two-Stage Robust Integer Optimization},
+	        author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias B. Khalil},
+	        journal={arXiv preprint arXiv:2310.04345},
+	        year={2024}
+	      }  
+	    </code>
+	  </pre>
+	</span> -->
+
+
+<!-- 	<table align=center width=400px>
+		<tr>
+			<center> Bibtex </center>
+			<td style="text-align: justify; text-align-last: left;">
+
+		</tr>
+	</table> -->
+
+
+
+
+	<br>
+	<hr>
+	<br>
+
+	<table align=center width=800px>
+		<center><h1>ICLR Conference Version of The Paper</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/neur2ro.png"/></a></td>
+			<td><span style="font-size:14pt">J. Dumouchelle, E. Julien, J. Kurtz, E.B. Khalil<br>
+				<b>Neur2RO: Neural Two-Stage Robust Optimization</b><br>
+				In ICLR, 2024<br>
+				(hosted on <a href="https://openreview.net/pdf?id=T5Xb0iGCCv">OpenReview</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+
+
+	<br>
+	<br>
+	<hr>
+	<br>
+
+
+<center><h1>Bibtex </h1></center>
+<pre style="background-color: #f0f0f0; padding: 10px;">
+@article{dumouchelle2024deeplearningtwostagerobust,
+	title={Deep Learning for Two-Stage Robust Integer Optimization},
+	author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias B. Khalil},
+	journal={arXiv preprint arXiv:2310.04345},
+	year={2024}
+}
+</pre>
+
+<pre style="background-color: #f0f0f0; padding: 10px;">
+@inproceedings{dumouchelle2023neur2ro,
+	title={Neur2{RO}: Neural Two-Stage Robust Optimization},
+	author={Dumouchelle, Justin and Julien, Esther and Kurtz, Jannis and Khalil, Elias Boutros},
+	booktitle={The Twelfth International Conference on Learning Representations},
+	year={2024}
+}
+</pre>
+
+<!-- 
+	<table align=center width=800px>
+	<center><h1>Bibtex </h1></center>
+
+	<pre style="background-color: #f0f0f0; padding: 10px;">
+	  <code>
+	article{dumouchelle2024deeplearningtwostagerobust,
+		title={Deep Learning for Two-Stage Robust Integer Optimization},
+		author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias B. Khalil},
+		journal={arXiv preprint arXiv:2310.04345},
+		year={2024}
+	}
+	  </code>
+	</pre>
+	<pre style="background-color: #f0f0f0; padding: 10px;">
+	  <code>
+	@inproceedings{dumouchelle2023neur2ro,
+		title={Neur2{RO}: Neural Two-Stage Robust Optimization},
+		author={Dumouchelle, Justin and Julien, Esther and Kurtz, Jannis and Khalil, Elias Boutros},
+		booktitle={The Twelfth International Conference on Learning Representations},
+		year={2024}
+	}
+	  </code>
+	</pre>
+	</table>
+ -->
+
+
+
+
+<!-- 
+	<span style="font-size:14pt">
+	<pre>
+	<code>
+	@inproceedings{dumouchelle2023neur2ro,
+	  title={Neur2{RO}: Neural Two-Stage Robust Optimization},
+	  author={Dumouchelle, Justin and Julien, Esther and Kurtz, Jannis and Khalil, Elias Boutros},
+	  booktitle={The Twelfth International Conference on Learning Representations},
+	  year={2024}
+	}
+	</code>
+	</pre>
+	</span>
+
+	<!-- <hr> -->
+	
+
+	
+
+
+<!-- 	<table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
 				<a href="./resources/bibtex.txt">[Bibtex]</a>
 			</center></td>
 		</tr>
-	</table>
+	</table> -->
 
-	<hr>
+	<!-- <hr> -->
 
 	<!-- <table align=center width=900px>
 		<center><h1>Acknowledgements</h1></center>
